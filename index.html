@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GOLTEX – Online Disk Futbolu</title>
+<meta name="description" content="HaxBall tarzı online futbol artık cebinde. Arkadaşınla oda kur, 1'e 1 maç yap, kendi stadyumunu kur. iPhone için ücretsiz.">
+<meta name="theme-color" content="#070d1c">
+<meta property="og:title" content="GOLTEX – Online Disk Futbolu">
+<meta property="og:description" content="HaxBall tarzı online futbol artık cebinde. iPhone için ücretsiz.">
+<meta property="og:image" content="img/s1.jpg">
+<meta property="og:type" content="website">
+<meta name="apple-itunes-app" content="app-id=6821743978">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070d1c;--bg2:#0d1530;--y:#ffc83a;--t:#fff;--m:#9aa6c8;--line:rgba(255,200,58,.25)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--t);font-family:Rubik,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.R{font-family:'Russo One',Rubik,sans-serif;text-transform:uppercase;letter-spacing:.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* hero */
+.hero{position:relative;padding:28px 0 56px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-20% -10% auto;height:120%;background:radial-gradient(60% 50% at 70% 40%,rgba(255,200,58,.14),transparent 70%),radial-gradient(50% 45% at 15% 20%,rgba(60,90,200,.25),transparent 70%);pointer-events:none}
+.pitch{position:absolute;inset:0;opacity:.07;pointer-events:none}
+nav{position:relative;display:flex;align-items:center;justify-content:space-between;margin-bottom:40px}
+.brand{display:flex;align-items:center;gap:10px;font-size:22px}
+.brand img{width:40px;height:40px;border-radius:10px}
+.brand span{color:var(--y)}
+.navcta{font-size:14px;font-weight:700;border:1.5px solid var(--line);padding:9px 16px;border-radius:999px}
+.grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--y);color:var(--bg);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--bg)}
+h1{margin:18px 0 16px;font-size:clamp(40px,7vw,72px);line-height:1}
+h1 span{color:var(--y);display:block}
+.lead{font-size:18px;line-height:1.55;color:#c9d2ec;max-width:30em}
+.cta{display:inline-flex;align-items:center;gap:14px;margin-top:30px;background:#000;border:1.5px solid rgba(255,255,255,.25);padding:12px 26px 12px 20px;border-radius:16px;transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.cta svg{width:30px;height:30px;fill:#fff}
+.cta small{display:block;font-size:12px;color:#c9d2ec}
+.cta b{display:block;font-size:22px;font-weight:700;line-height:1.1}
+.note{margin-top:14px;font-size:14px;color:var(--m)}
+.phone{justify-self:center;width:min(300px,78vw);aspect-ratio:9/16;border-radius:34px;padding:9px;background:linear-gradient(160deg,#2a3560,#0b1124);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08)}
+.phone video{width:100%;height:100%;object-fit:cover;border-radius:26px;display:block;background:#0b1124}
+/* features */
+section{padding:56px 0}
+h2{font-size:clamp(26px,4vw,38px);margin-bottom:28px;text-align:center}
+h2 span{color:var(--y)}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.f{background:var(--bg2);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:24px}
+.f b{width:44px;height:44px;border-radius:12px;background:var(--y);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.f b svg{width:24px;height:24px;fill:none;stroke:var(--bg);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.f h3{font-size:19px;margin-bottom:8px}
+.f p{color:var(--m);line-height:1.5;font-size:15px}
+/* gallery */
+.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 18px;margin:0 -20px;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal img{flex:0 0 auto;width:min(620px,86vw);aspect-ratio:2220/1020;object-fit:cover;border-radius:16px;scroll-snap-align:center;border:1px solid rgba(255,255,255,.08);background:var(--bg2)}
+/* final */
+.final{text-align:center;background:radial-gradient(70% 80% at 50% 0,rgba(255,200,58,.12),transparent 70%)}
+.final .cta{margin-top:10px}
+footer{padding:30px 0 40px;text-align:center;color:var(--m);font-size:13px;line-height:1.8;border-top:1px solid rgba(255,255,255,.06)}
+footer a{text-decoration:underline}
+.kp{letter-spacing:.3em;font-weight:700;color:#7d89ad;margin-bottom:6px}
+/* sticky mobile cta */
+.sticky{display:none}
+@media (max-width:800px){
+  .grid{grid-template-columns:1fr;text-align:center;gap:36px}
+  .lead{margin:0 auto}
+  nav{margin-bottom:28px}
+  .feats{grid-template-columns:1fr}
+  section{padding:40px 0}
+  .sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:9;align-items:center;justify-content:center;gap:10px;height:56px;border-radius:16px;background:var(--y);color:var(--bg);font-family:'Russo One',sans-serif;font-size:18px;text-transform:uppercase;box-shadow:0 12px 40px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .25s}
+  .sticky.on{transform:none}
+  .sticky svg{width:22px;height:22px;fill:var(--bg)}
+  footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="pitch" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#ffc83a" stroke-width="3"><rect x="60" y="60" width="1080" height="580" rx="10"/><path d="M600 60v580"/><circle cx="600" cy="350" r="110"/><rect x="60" y="210" width="140" height="280"/><rect x="1000" y="210" width="140" height="280"/></g></svg>
+  <div class="wrap">
+    <nav>
+      <div class="brand R"><img src="img/icon.png" alt=""><em style="font-style:normal">GOL<span>TEX</span></em></div>
+      <a class="navcta store" href="https://apps.apple.com/tr/app/id6821743978">İndir</a>
+    </nav>
+    <div class="grid">
+      <div>
+        <div class="chip"><i></i>HaxBall tarzı online futbol</div>
+        <h1 class="R">Bu golü<span>atabilir misin?</span></h1>
+        <p class="lead">Disk futbolu artık cebinde. Arkadaşınla oda kur, saniyeler içinde 1'e 1 maça gir, kupaları topla ve kendi stadyumunu kur.</p>
+        <a class="cta store" id="ctaTop" href="https://apps.apple.com/tr/app/id6821743978">
+          <svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9c-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.3-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>
+          <span><small>Ücretsiz indir</small><b>App Store</b></span>
+        </a>
+        <p class="note">iPhone ve iPad için · Ücretsiz</p>
+      </div>
+      <div class="phone"><video src="img/tanitim.mp4" poster="img/tanitim.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2 class="R">Neden <span>Goltex?</span></h2>
+    <div class="feats">
+      <div class="f"><b><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></b><h3>Online 1'e 1 maç</h3><p>Rakip bul ya da oda kodunu paylaş. Gecikmesiz, hızlı ve rekabetçi maçlar.</p></div>
+      <div class="f"><b><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c1.6.8 2.6 2.5 3 5.2"/></svg></b><h3>Arkadaşınla oda kur</h3><p>Odayı aç, kodu gönder, arkadaşın girsin. Kim daha iyi, sahada belli olsun.</p></div>
+      <div class="f"><b><svg viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3M12 14v4M8 21h8"/></svg></b><h3>Kupa, forma, stadyum</h3><p>Formanı seç, tribünü kendi renklerine boya, ışıklarıyla kendi stadyumunu kur.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="R">Sahaya <span>bir göz at</span></h2>
+    <div class="gal">
+      <img src="img/s1.jpg" alt="Goltex stadyum" loading="lazy">
+      <img src="img/s2.jpg" alt="Goltex maç ekranı" loading="lazy">
+      <img src="img/s3.jpg" alt="Goltex tribün" loading="lazy">
+      <img src="img/s4.jpg" alt="Goltex oyun" loading="lazy">
+      <img src="img/s5.jpg" alt="Goltex oyun" loading="lazy">
+      <img src="img/s6.jpg" alt="Goltex oyun" loading="lazy">
+      <img src="img/s7.jpg" alt="Goltex oyun" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="R" style="margin-bottom:14px">Düdük <span>sende.</span></h2>
+    <p class="lead" style="margin:0 auto 10px">İndir, oda kur, ilk golü sen at.</p>
+    <a class="cta store" href="https://apps.apple.com/tr/app/id6821743978">
+      <svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9c-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.3-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>
+      <span><small>Ücretsiz indir</small><b>App Store</b></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="kp">KURUL PROJECT</div>
+    İletişim: <a href="mailto:kurulbase@gmail.com">kurulbase@gmail.com</a> ·
+    <a href="https://gqqcnbtdpsbnfsyojfva.supabase.co/storage/v1/object/public/site/privacy.txt">Gizlilik</a>
+  </div>
+</footer>
+
+<a class="sticky store" id="sticky" href="https://apps.apple.com/tr/app/id6821743978"><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9c-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.3-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>Ücretsiz indir</a>
+
+<script>
+(function(){
+  var top=document.getElementById('ctaTop'),st=document.getElementById('sticky');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){st.classList.toggle('on',!e[0].isIntersecting)}).observe(top);
+  }
+})();
+</script>
+</body>
+</html>
